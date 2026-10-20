@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Eventurelation</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+
+<body class="bg-[#0E1321]">
+  <!-- Flowbite JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.js"></script>
+ <!-- NAVBAR -->
+<nav id="navbar" class="w-full bg-[#0B0F1C] px-4 sm:px-6 lg:px-8 py-4 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+
+        <!-- LOGO -->
+        <img 
+            src="./images/logo.png"
+            alt="Eventurelation Logo"
+            class="w-25 h-16 sm:w-20 sm:h-20 object-contain"
+        >
+
+        <!-- DESKTOP MENU -->
+        <ul class="hidden lg:flex items-center gap-1 xl:gap-2">
+
+            <li>
+                <a href="home.html"
+                    class="block px-3 xl:px-4 py-2 rounded-xl text-[#8F897E] hover:text-[#F5CF6A] hover:bg-[#252A39] transition">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#about"
+                    class="block px-3 xl:px-4 py-2 rounded-xl text-[#8F897E] hover:text-[#F5CF6A] hover:bg-[#252A39] transition">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="#events"
+                    class="block px-3 xl:px-4 py-2 rounded-xl text-[#8F897E] hover:text-[#F5CF6A] hover:bg-[#252A39] transition">
+                    Events
+                </a>
+            </li>
+
+            <li>
+                <a href="#services"
+                    class="block px-3 xl:px-4 py-2 rounded-xl text-[#8F897E] hover:text-[#F5CF6A] hover:bg-[#252A39] transition">
+                    Services
+                </a>
+            </li>
+
+            <li>
+                <a href="booking.html"
+                    class="block px-3 xl:px-4 py-2 rounded-xl text-[#8F897E] hover:text-[#F5CF6A] hover:bg-[#252A39] transition">
+                    Booking
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html"
+                    class="block px-3 xl:px-4 py-2 rounded-xl text-[#8F897E] hover:text-[#F5CF6A] hover:bg-[#252A39] transition">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+
+        <!-- DESKTOP BUTTONS -->
+        <div class="hidden lg:flex items-center gap-2">
+
+            <button
+                class="text-white px-5 py-2 border border-gray-400 rounded-3xl font-semibold hover:border-[#D4AF37] transition">
+                <a href="login.html">Login</a>
+            </button>
+
+            <button
+                class="text-black bg-[#D4AF37] px-5 py-3 rounded-3xl font-semibold hover:bg-[#F5CF6A] transition">
+                <a href="registration.html">Register</a>
+            </button>
+
+            <button class="p-2">
+                <i class="fa-solid fa-circle-user fa-xl"
+                    style="color: rgb(255, 212, 59);">
+                </i>
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE HAMBURGER -->
+        <button
+            type="button"
+            data-drawer-target="mobile-navigation"
+            data-drawer-show="mobile-navigation"
+            aria-controls="mobile-navigation"
+            class="lg:hidden text-white text-2xl p-2 hover:text-[#F5CF6A] transition">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+</nav>
+<!-- MOBILE SIDE DRAWER -->
+
+<div
+    id="mobile-navigation"
+    class="fixed top-0 left-0 z-[60] h-screen w-80 max-w-[85%]
+           p-5 overflow-y-auto
+           transition-transform -translate-x-full
+           bg-[#0B0F1C]
+           border-r border-[#252A39]"
+    tabindex="-1"
+    aria-labelledby="mobile-navigation-label">
+
+    <div class="flex items-center justify-between pb-5 border-b border-[#252A39]">
+
+        <div class="flex items-center gap-3">
+
+            <img
+                src="./images/logo.png"
+                alt="Eventurelation Logo"
+                class="w-16 h-12 object-contain">
+
+            <span
+                id="mobile-navigation-label"
+                class="text-white text-lg font-semibold">
+                Eventurelation
+            </span>
+
+        </div>
+
+        <button
+            type="button"
+            data-drawer-hide="mobile-navigation"
+            aria-controls="mobile-navigation"
+            class="text-[#8F897E] hover:text-[#F5CF6A]
+                   hover:bg-[#252A39]
+                   rounded-xl w-10 h-10
+                   flex items-center justify-center
+                   transition">
+
+            <i class="fa-solid fa-xmark text-xl"></i>
+
+            <span class="sr-only">
+                Close menu
+            </span>
+
+        </button>
+
+    </div>
+
+
+    <!-- MOBILE MENU -->
+    <div class="py-6">
+
+        <ul class="space-y-2 font-medium">
+
+
+            <!-- HOME -->
+            <li>
+                <a
+                    href="home.html"
+                    class="flex items-center px-4 py-3
+                           text-[#8F897E]
+                           rounded-xl
+                           hover:bg-[#252A39]
+                           hover:text-[#F5CF6A]
+                           transition">
+
+                    <i class="fa-solid fa-house w-6"></i>
+
+                    <span class="ml-3">
+                        Home
+                    </span>
+
+                </a>
+            </li>
+
+
+            <!-- ABOUT -->
+            <li>
+                <a
+                    href="home.html#about"
+                    class="flex items-center px-4 py-3
+                           text-[#8F897E]
+                           rounded-xl
+                           hover:bg-[#252A39]
+                           hover:text-[#F5CF6A]
+                           transition">
+
+                    <i class="fa-solid fa-circle-info w-6"></i>
+
+                    <span class="ml-3">
+                        About
+                    </span>
+
+                </a>
+            </li>
+
+
+            <!-- EVENTS -->
+            <li>
+                <a
+                    href="home.html#events"
+                    class="flex items-center px-4 py-3
+                           text-[#8F897E]
+                           rounded-xl
+                           hover:bg-[#252A39]
+                           hover:text-[#F5CF6A]
+                           transition">
+
+                    <i class="fa-solid fa-calendar-days w-6"></i>
+
+                    <span class="ml-3">
+                        Events
+                    </span>
+
+                </a>
+            </li>
+
+
+            <!-- SERVICES -->
+            <li>
+                <a
+                    href="home.html#services"
+                    class="flex items-center px-4 py-3
+                           text-[#8F897E]
+                           rounded-xl
+                           hover:bg-[#252A39]
+                           hover:text-[#F5CF6A]
+                           transition">
+
+                    <i class="fa-solid fa-briefcase w-6"></i>
+
+                    <span class="ml-3">
+                        Services
+                    </span>
+
+                </a>
+            </li>
+
+
+            <!-- BOOKING -->
+            <li>
+                <a
+                    href="booking.html"
+                    class="flex items-center px-4 py-3
+                           text-[#8F897E]
+                           rounded-xl
+                           hover:bg-[#252A39]
+                           hover:text-[#F5CF6A]
+                           transition">
+
+                    <i class="fa-solid fa-calendar-check w-6"></i>
+
+                    <span class="ml-3">
+                        Booking
+                    </span>
+
+                </a>
+            </li>
+
+
+            <!-- CONTACT -->
+            <li>
+                <a
+                    href="contact.html"
+                    class="flex items-center px-4 py-3
+                           text-[#8F897E]
+                           rounded-xl
+                           hover:bg-[#252A39]
+                           hover:text-[#F5CF6A]
+                           transition">
+
+                    <i class="fa-solid fa-envelope w-6"></i>
+
+                    <span class="ml-3">
+                        Contact
+                    </span>
+
+                </a>
+            </li>
+
+
+            <!-- DIVIDER -->
+            <li class="py-3">
+                <div class="border-t border-[#252A39]"></div>
+            </li>
+
+
+            <!-- LOGIN -->
+            <li>
+                <a
+                    href="login.html"
+                    class="flex items-center px-4 py-3
+                           text-[#8F897E]
+                           rounded-xl
+                           hover:bg-[#252A39]
+                           hover:text-[#F5CF6A]
+                           transition">
+
+                    <i class="fa-solid fa-right-to-bracket w-6"></i>
+
+                    <span class="ml-3">
+                        Login
+                    </span>
+
+                </a>
+            </li>
+
+
+            <!-- REGISTER -->
+            <li>
+                <a
+                    href="registration.html"
+                    class="flex items-center px-4 py-3
+                           text-black
+                           bg-[#D4AF37]
+                           rounded-xl
+                           hover:bg-[#F5CF6A]
+                           transition">
+
+                    <i class="fa-solid fa-user-plus w-6"></i>
+
+                    <span class="ml-3 font-semibold">
+                        Register
+                    </span>
+
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+      <section class="relative h-screen overflow-hidden">
+
+        <!-- Background Image -->
+        <img 
+            src="./images/home.png"
+            alt="Event Background"
+            class="absolute inset-0 w-full h-full object-cover"
+        >
+
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-black/70"></div>
+
+        
+
+        <!-- Content -->
+        <div class="relative z-10 flex h-full items-center justify-center text-center px-6">
+
+            <div class="max-w-5xl">
+
+                <!-- Small Badge -->
+                <div id="hero-badge" class="inline-flex items-center gap-2 mb-8 px-5 py-2
+                            rounded-full bg-gray-900/70 border border-gray-700
+                            text-yellow-400 text-xs font-semibold ">
+                    <span>‹</span>
+                    CREATE • CELEBRATE • REMEMBER
+                </div>
+
+                <!-- Main Heading -->
+                <h1 id="hero-title" class="text-4xl md:text-5xl lg:text-6xl 
+                           font-bold text-white leading-tight font-['Playfair_Display']">
+
+                    We Turn Your Special Moments Into
+
+                    <span class="block text-yellow-400  mt-2 font-['Playfair_Display']">
+                        Unforgettable Experiences
+                    </span>
+
+                </h1>
+
+                <!-- Description -->
+                <p id="hero-title" class="max-w-2xl mx-auto mt-6 text-gray-300
+                          text-sm md:text-base leading-7">
+
+                    From intimate royal celebrations to grand global summits,
+                    we plan, design, and orchestrate every subtle nuance so you
+                    can savor every second of the spectacle.
+
+                </p>
+
+                <!-- Buttons -->
+                <div id="hero-title" class="flex flex-col sm:flex-row items-center justify-center
+                            gap-4 mt-8">
+
+                    <!-- Book Button -->
+                    <a id="hero-buttons" href="#"
+                       class="flex items-center gap-3 px-7 py-4
+                              rounded-full bg-yellow-400 text-gray-900
+                              font-semibold hover:bg-yellow-300">
+
+                        Book Your Event
+
+                        <span class="text-xl">→</span>
+
+                    </a>
+
+                    <!-- Explore Button -->
+                    <a id="hero-buttons" href="#"
+                       class="flex items-center gap-3 px-7 py-4
+                              rounded-full bg-gray-800/80 text-white
+                              border border-gray-700
+                              font-medium hover:bg-gray-700">
+
+                        <span>◉</span>
+                        Explore Events
+
+                    </a>
+
+                </div>
+
+                <!-- Bottom Rating -->
+                <div id="hero-title" class="inline-flex items-center gap-3 mt-10
+                            px-5 py-2.5 rounded-full
+                            bg-gray-900/80 border border-gray-700">
+
+                    <div id="hero-title" class="text-yellow-400 text-sm">
+                        ☆ ☆ ☆ ☆ ☆
+                    </div>
+
+                    <span class="text-gray-300 text-xs">
+                        500+ Events Successfully Managed across India & Abroad
+                    </span>
+
+                </div>
+
+            </div>
+
+
+           
+             
+
+        </div>
+
+    </section>
+
+    <section id="about">
+        <div class="grid grid-cols-1 lg:grid-cols-2 w-[90%] p-5 m-5">
+            <div>
+                <img src="./images/home.png" alt="" width="100%">
+            </div>
+            <div class="m-5">
+                <p class="font-sm text-yellow-400">ABOUT Eventurelation</p>
+                <h1 class="font-[family-name:'PlayfairDisplay'] text-xl text-white">We Create Experience That People Remember</h1>
+                <p class="text-justify text-white">
+                   Eventurelation is an internationally recognized bespoke event production and
+                    experiental design maison based in kochi,Kerala.We specialize in curating
+                    milesdtone weddings,lavish galas,and corporate summits that honor
+                    traditions while elevating modern grandeur.
+                </p>
+                <p class="text-justify text-white">
+                    From atomospheric lighting insullations spanning thousands of twinkling
+                    pendants to masterfully calibrated culinary journeys. our production atlier
+                    harmonizes stagecraft, floral design. and guest hospitality into a single poetic canvas.
+                    
+                </p>
+                <div class="grid grid-cols-3 gap-4 sm:gap-10">
+
+        <div>
+            <h2 class="font-serif text-2xl font-bold text-yellow-400 sm:text-3xl">
+                500+
+            </h2>
+            <p class="mt-1 text-xs text-white sm:text-sm">
+                Events Completed
+            </p>
+        </div>
+
+        <div>
+            <h2 class="font-serif text-2xl font-bold text-yellow-400 sm:text-3xl">
+                12+
+            </h2>
+            <p class="mt-1 text-xs text-white sm:text-sm">
+                Years Experience
+            </p>
+        </div>
+
+        <div>
+            <h2 class="font-serif text-2xl font-bold text-yellow-400 sm:text-3xl">
+                98%
+            </h2>
+            <p class="mt-1 text-xs text-white sm:text-sm">
+                Happy Clients
+            </p>
+        </div>
+
+    </div>
+            </div>
+        </div>
+        
+
+    </section>
+    <section>
+
+  <main id="top">
+
+    <!-- Portfolio Section -->
+    <section id="events" aria-labelledby="portfolio-heading" class="pt-14 pb-6 sm:pt-20 sm:pb-8">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+        <p class="text-xs sm:text-sm font-semibold tracking-wide text-yellow-400  mb-3">Curated Portfolio</p>
+        <h1 id="portfolio-heading" class="font-serif text-3xl text-white sm:text-4xl md:text-5xl leading-tight max-w-2xl">
+          Moments we've made special
+        </h1>
+        <p class="mt-4 max-w-xl text-sm sm:text-base text-slate-300 leading-relaxed">
+          Explore some of the beautiful experiences we've crafted for discerning hosts across Kerala and beyond.
+        </p>
+
+        <!-- Category filters -->
+        <div class="mt-8 flex flex-wrap gap-2.5" role="group" aria-label="Filter portfolio by category">
+          <button type="button" data-filter="all" class="filter-btn rounded-full px-5 py-2.5 text-sm font-medium bg-yellow-300 text-black transition-colors focus-ring" aria-pressed="true">All Events</button>
+          <button type="button" data-filter="weddings" class="filter-btn rounded-full px-5 py-2.5 text-sm font-medium bg-white/5 text-white hover:bg-yellow-300 hover:text-black transition-colors focus-ring" aria-pressed="false">Weddings</button>
+          <button type="button" data-filter="birthday" class="filter-btn rounded-full px-5 py-2.5 text-sm font-medium bg-white/5 text-white hover:bg-yellow-300 hover:text-black transition-colors focus-ring" aria-pressed="false">Birthday Parties</button>
+          <button type="button" data-filter="corporate" class="filter-btn rounded-full px-5 py-2.5 text-sm font-medium bg-white/5 text-white hover:bg-yellow-300 hover:text-black transition-colors focus-ring" aria-pressed="false">Corporate Events</button>
+          <button type="button" data-filter="photography" class="filter-btn rounded-full px-5 py-2.5 text-sm font-medium bg-white/5 text-white hover:bg-yellow-300 hover:text-black transition-colors focus-ring" aria-pressed="false">Photography Sessions</button>
+          <button type="button" data-filter="workshop" class="filter-btn rounded-full px-5 py-2.5 text-sm font-medium bg-white/5 text-white hover:bg-yellow-300 hover:text-black transition-colors focus-ring" aria-pressed="false">Workshops &amp; Seminars</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Gallery -->
+    <section aria-label="Portfolio gallery" class="pb-16 sm:pb-24">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+
+          <!-- Card 1: Large featured -- Royal Heritage Wedding -->
+          <article data-category="weddings" class="portfolio-card group relative md:row-span-2 rounded-2xl overflow-hidden border border-white/10 min-h-[320px] md:min-h-[520px]">
+            <img
+              src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80"
+              alt="Ornate floral wedding mandap decorated with marigold garlands and hanging chandeliers"
+              class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <span class="absolute top-4 left-4 rounded-full bg-black/40 backdrop-blur-sm px-3 py-1 text-[11px] font-semibold tracking-wide text-yellow-400 border border-white/10">Weddings</span>
+            <a href="#contact" class="absolute top-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-cream transition-all duration-500 group-hover:rotate-45 group-hover:bg-gold group-hover:text-ink focus-ring" aria-label="View Royal Heritage Wedding details">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+            </a>
+            <div class="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
+              <p class="text-xs text-slate-300 mb-1.5">Nov 2025 · 850 Guests · Kochi</p>
+              <h3 class="font-serif text-xl text-slate-300 sm:text-2xl leading-snug">Royal Heritage Wedding</h3>
+            </div>
+          </article>
+
+          <!-- Card 2: Corporate -- Lumina Tech Summit -->
+          <article data-category="corporate" class="portfolio-card group relative rounded-2xl overflow-hidden border border-white/10 min-h-[240px]">
+            <img
+              src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1000&q=80"
+              alt="Corporate conference stage with speaker addressing a large audience under blue lighting"
+              class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <span class="absolute top-4 left-4 rounded-full bg-black/40 backdrop-blur-sm px-3 py-1 text-[11px] font-semibold tracking-wide text-yellow-400 border border-white/10">Corporate</span>
+            <a href="#contact" class="absolute top-4 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-cream transition-all duration-500 group-hover:rotate-45 group-hover:bg-gold group-hover:text-ink focus-ring" aria-label="View Lumina Tech Summit 2026 details">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+            </a>
+            <div class="absolute bottom-0 left-0 right-0 p-5">
+              <p class="text-xs text-slate-300 mb-1.5">Jun 2026 · 1,200 Attendees</p>
+              <h3 class="font-serif text-slate-300 text-lg leading-snug">Lumina Tech Summit 2026</h3>
+            </div>
+          </article>
+
+          <!-- Card 3: Birthday -- Starlight 30th -->
+          <article data-category="birthday" class="portfolio-card group relative rounded-2xl overflow-hidden border border-white/10 min-h-[240px]">
+            <img
+              src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1000&q=80"
+              alt="String lights strung above an evening rooftop birthday celebration with a city skyline"
+              class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <span class="absolute top-4 left-4 rounded-full bg-black/40 backdrop-blur-sm px-3 py-1 text-[11px] font-semibold tracking-wide text-yellow-400 border border-white/10">Birthday</span>
+            <a href="#contact" class="absolute top-4 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-cream transition-all duration-500 group-hover:rotate-45 group-hover:bg-gold group-hover:text-ink focus-ring" aria-label="View Starlight 30th Birthday Soirée details">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+            </a>
+            <div class="absolute bottom-0 left-0 right-0 p-5">
+              <p class="text-xs text-slate-300 mb-1.5">Dec 2025 · Private Celebration</p>
+              <h3 class="font-serif text-slate-300 text-lg leading-snug">Starlight 30th Birthday Soirée</h3>
+            </div>
+          </article>
+
+          <!-- Card 4: Photography -- Editorial Fashion & Bridal Portraiture -->
+          <article data-category="photography" class="portfolio-card group relative rounded-2xl overflow-hidden border border-white/10 min-h-[300px]">
+            <img
+              src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=1000&q=80"
+              alt="Bride in an elegant veil posing among candlelight in an editorial portrait"
+              class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <span class="absolute top-4 left-4 rounded-full bg-black/40 backdrop-blur-sm px-3 py-1 text-[11px] font-semibold tracking-wide text-yellow-400 border border-white/10">Photography</span>
+            <a href="#contact" class="absolute top-4 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-cream transition-all duration-500 group-hover:rotate-45 group-hover:bg-gold group-hover:text-ink focus-ring" aria-label="View Editorial Fashion & Bridal Portraiture details">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+            </a>
+            <div class="absolute bottom-0 left-0 right-0 p-5">
+              <p class="text-xs text-slate-300 mb-1.5">Vogue India Feature Session</p>
+              <h3 class="font-serif text-slate-300 text-lg leading-snug">Editorial Fashion &amp; Bridal Portraiture</h3>
+            </div>
+          </article>
+
+          <!-- Card 5: Workshop -- Masterclass Culinary Workshop -->
+          <article data-category="workshop" class="portfolio-card group relative rounded-2xl overflow-hidden border border-white/10 min-h-[300px]">
+            <img
+              src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1000&q=80"
+              alt="Chef leading a hands-on culinary masterclass with participants gathered around a kitchen counter"
+              class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <span class="absolute top-4 left-4 rounded-full bg-black/40 backdrop-blur-sm px-3 py-1 text-[11px] font-semibold tracking-wide text-yellow-400 border border-white/10">Workshop</span>
+            <a href="#contact" class="absolute top-4 right-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-cream transition-all duration-500 group-hover:rotate-45 group-hover:bg-gold group-hover:text-ink focus-ring" aria-label="View Masterclass Culinary Workshop details">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+            </a>
+            <div class="absolute bottom-0 left-0 right-0 p-5">
+              <p class="text-xs text-slate-300 mb-1.5">Interactive Gastronomy Session</p>
+              <h3 class="font-serif text-slate-300 text-lg leading-snug">Masterclass Culinary Workshop</h3>
+            </div>
+          </article>
+
+        </div>
+
+        <p id="noResults" class="hidden text-center text-slate text-sm mt-10">No moments in this category yet — check back soon.</p>
+      </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section id="events" aria-labelledby="events-heading" class="py-16 sm:py-24 bg-panel border-y border-white/10">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+        <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10 sm:mb-12">
+          <div>
+            <p class="text-xs sm:text-sm font-semibold tracking-wide text-yellow-300 mb-3">Calendar of Occasions</p>
+            <h2 id="events-heading" class="font-serif text-3xl sm:text-4xl text-white leading-tight">Upcoming events</h2>
+            <p class="mt-4 max-w-lg text-sm sm:text-base text-slate-300 leading-relaxed">
+              Discover what's happening next across our venues.
+            </p>
+          </div>
+          <a href="#contact" class="hidden sm:inline-flex items-center gap-1.5 text-sm font-medium text-yellow-300 hover:text-white transition-colors focus-ring rounded shrink-0">
+            View master schedule
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div id="service-cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+
+          <!-- Event Card 1 -->
+          <div id="service-cards" class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 flex flex-col hover:border-gold/40 transition-colors">
+            <span class="self-start rounded-full bg-gold/10 text-yellow-300 text-[11px] font-semibold tracking-wide px-3 py-1 mb-4">Limited Access</span>
+            <h3 class="font-serif text-lg leading-snug text-white mb-2">Grand Imperial Wedding Showcase</h3>
+            <p class="text-sm text-slate-300 leading-relaxed mb-5">A curated showcase of luxury wedding concepts and celebrations.</p>
+            <div class="mt-auto space-y-1.5 text-sm text-slate mb-5">
+              <p class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0 text-yellow-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="4" width="18" height="18" rx="2"/><path stroke-linecap="round" d="M16 2v4M8 2v4M3 10h18"/></svg>
+                <p class="text-gray-300">20 September 2026</p>
+              </p>
+              <p class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0 text-yellow-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.1-7-11a7 7 0 1114 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                <p class="text-gray-300">Grand Hyatt, Kochi</p>
+              </p>
+            </div>
+            <a href="" class="inline-flex items-center gap-1.5 text-sm font-medium text-cream hover:text-gold transition-colors focus-ring rounded">
+              <p class="font-thin text-white">View details</p>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <!-- Event Card 2 -->
+          <div id="service-cards"  class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 flex flex-col hover:border-gold/40 transition-colors">
+            <span class="self-start rounded-full bg-gold/10 text-yellow-300 text-[11px] font-semibold tracking-wide px-3 py-1 mb-4">Exclusive</span>
+            <h3 class="font-serif text-lg leading-snug mb-2 text-white">Luxe Golden Birthday Celebration</h3>
+            <p class="text-sm text-slate-300 leading-relaxed mb-5">An intimate luxury celebration designed around unforgettable moments.</p>
+            <div class="mt-auto space-y-1.5 text-sm text-slate mb-5">
+              <p class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0 text-yellow-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="4" width="18" height="18" rx="2"/><path stroke-linecap="round" d="M16 2v4M8 2v4M3 10h18"/></svg>
+                <p class="font-thin text-gray-300">27 September 2026</p>
+              </p>
+              <p class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0 text-yellow-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.1-7-11a7 7 0 1114 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                <p class="font-thin text-white">Sobha City, Thrissur</p>
+              </p>
+            </div>
+            <a href="#contact" class="inline-flex items-center gap-1.5 text-sm font-medium text-white transition-colors focus-ring rounded">
+              View details
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <!-- Event Card 3 -->
+          <div id="service-cards"  class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 flex flex-col hover:border-gold/40 transition-colors">
+            <span class="self-start rounded-full bg-gold/10 text-yellow-300 text-[11px] font-semibold tracking-wide px-3 py-1 mb-4">Masterclass</span>
+            <h3 class="font-serif text-lg leading-snug mb-2 text-white">Visual Masterclass Photography Meet</h3>
+            <p class="text-sm text-slate leading-relaxed mb-5 text-white">An immersive photography session focused on editorial techniques.</p>
+            <div class="mt-auto space-y-1.5 text-sm text-slate mb-5">
+              <p class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0 text-yellow-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="4" width="18" height="18" rx="2"/><path stroke-linecap="round" d="M16 2v4M8 2v4M3 10h18"/></svg>
+                <p class="font-thin text-white">4 October 2026</p>
+              </p>
+              <p class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0 text-yellow-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.1-7-11a7 7 0 1114 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                <p class="font-thin text-white">Lumina Studios, Ernakulam</p>
+              </p>
+            </div>
+            <a href="#contact" class="inline-flex items-center gap-1.5 text-sm font-medium text-white transition-colors focus-ring rounded">
+              View details
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <!-- Event Card 4 -->
+          <div id="service-cards" class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 flex flex-col hover:border-gold/40 transition-colors">
+            <span class="self-start rounded-full bg-gold/10 text-yellow-300 text-[11px] font-semibold tracking-wide px-3 py-1 mb-4">Summit</span>
+            <h3 class="font-serif text-lg leading-snug mb-2 text-white">Kerala Leadership Corporate Summit</h3>
+            <p class="text-sm text-slate leading-relaxed mb-5 text-white">A premium corporate gathering for business leaders and professionals.</p>
+            <div class="mt-auto space-y-1.5 text-sm text-slate mb-5">
+              <p class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0 text-yellow-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="4" width="18" height="18" rx="2"/><path stroke-linecap="round" d="M16 2v4M8 2v4M3 10h18"/></svg>
+                <p class="font-thin text-white">11 October 2026</p>
+              </p>
+              <p class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0 text-yellow-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.1-7-11a7 7 0 1114 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                <p class="font-thin text-white">Crowne Plaza, Kochi</p>
+              </p>
+            </div>
+            <a href="#contact" class="inline-flex items-center gap-1.5 text-sm font-medium text-white transition-colors focus-ring rounded">
+              View details
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-yellow-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+        </div>
+
+        <a href="#contact" class="sm:hidden mt-8 inline-flex items-center gap-1.5 text-sm font-medium text-gold focus-ring rounded">
+          View master schedule
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Specialties Section -->
+    <section id="services" aria-labelledby="specialties-heading" class="py-16 sm:py-24">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
+          <p class="text-xs sm:text-sm font-semibold tracking-wide text-yellow-300 mb-3">Our Specialties</p>
+          <h2 id="specialties-heading" class="font-serif text-3xl sm:text-4xl leading-tight text-white">Everything you need, beautifully</h2>
+        </div>
+
+        <div id="service-cards" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+
+          <div class="group rounded-2xl border border-white/10 p-6 sm:p-7 hover:bg-white/[0.03] transition-colors">
+            <div class="flex h-11 w-11 items-center justify-center rounded-full bg-gold/10 text-gold mb-5 transition-transform duration-500 group-hover:scale-110">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6c1.5-2 4.5-2.5 6-1s1 4.5-1 6l-5 4-5-4c-2-1.5-2.5-4.5-1-6s4.5-1 6 1z"/><path stroke-linecap="round" d="M12 15v6"/></svg>
+            </div>
+            <h3 class="font-serif text-lg mb-2 text-white">Luxury weddings</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">Full-service planning and design for ceremonies that feel unmistakably yours.</p>
+          </div>
+
+          <div class="group rounded-2xl border border-white/10 p-6 sm:p-7 hover:bg-white/[0.03] transition-colors">
+            <div class="flex h-11 w-11 items-center justify-center rounded-full bg-gold/10 text-gold mb-5 transition-transform duration-500 group-hover:scale-110">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="7" width="18" height="13" rx="1.5"/><path stroke-linecap="round" d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M3 12h18"/></svg>
+            </div>
+            <h3 class="font-serif text-lg mb-2 text-white">Corporate events</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">Summits, launches, and conferences run with precision from stage to floor.</p>
+          </div>
+
+          <div class="group rounded-2xl border border-white/10 p-6 sm:p-7 hover:bg-white/[0.03] transition-colors">
+            <div class="flex h-11 w-11 items-center justify-center rounded-full bg-gold/10 text-gold mb-5 transition-transform duration-500 group-hover:scale-110">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2l2.4 5.4L20 8l-4.4 4L17 18l-5-3-5 3 1.4-6L4 8l5.6-.6L12 2z"/></svg>
+            </div>
+            <h3 class="font-serif text-lg mb-2 text-white">Private celebrations</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">Milestone birthdays and intimate gatherings shaped around your story.</p>
+          </div>
+
+          <div class="group rounded-2xl border border-white/10 p-6 sm:p-7 hover:bg-white/[0.03] transition-colors">
+            <div class="flex h-11 w-11 items-center justify-center rounded-full bg-gold/10 text-gold mb-5 transition-transform duration-500 group-hover:scale-110">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="6" width="18" height="13" rx="2"/><circle cx="12" cy="12.5" r="3.5"/><path stroke-linecap="round" d="M8 6l1.5-2h5L16 6"/></svg>
+            </div>
+            <h3 class="font-serif text-lg mb-2 text-white">Photography</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">Editorial-grade coverage that turns a single day into a lasting record.</p>
+          </div>
+
+          <div class="group rounded-2xl border border-white/10 p-6 sm:p-7 hover:bg-white/[0.03] transition-colors">
+            <div class="flex h-11 w-11 items-center justify-center rounded-full bg-gold/10 text-gold mb-5 transition-transform duration-500 group-hover:scale-110">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M3 20l3-9 6-6 6 6-6 6-9 3z"/><path stroke-linecap="round" d="M14 5l5 5"/></svg>
+            </div>
+            <h3 class="font-serif text-lg mb-2 text-white">Event design</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">Florals, lighting, and staging composed as one cohesive visual world.</p>
+          </div>
+
+          <div class="group rounded-2xl border border-white/10 p-6 sm:p-7 hover:bg-white/[0.03] transition-colors">
+            <div class="flex h-11 w-11 items-center justify-center rounded-full bg-gold/10 text-gold mb-5 transition-transform duration-500 group-hover:scale-110">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path stroke-linecap="round" stroke-linejoin="round" d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path stroke-linecap="round" stroke-linejoin="round" d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+            </div>
+            <h3 class="font-serif text-lg mb-2 text-white">Workshops</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">Hands-on masterclasses in craft, cuisine, and creative practice.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+    </section>
+
+    <section class="bg-slate-950 pt-10  pb-25" style="font-family: Playfair Display, serif; ">
+      <div class="text-center uppercase text-amber-400 text-[12px] tracking-tight pt-15">the Eventurelation standards</div>  
+      <div  class="text-center  text-white text-3xl md:text-4xl lg:text-4xl tracking-tight ">Why Choose Eventurelation?</div>
+      <div class="text-yellow-100 text-[15px] text-center pt-3">We combine creative fearlessness with rigorous operational precision.</div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mx-4 md:mx-10 gap-4 py-20 ">
+            <div id="service-cards" class=" bg-slate-100/20  p-10 pb-20 rounded-3xl ">
+                <div> <span class="mx-3 my-10 bg-slate-100/20 rounded p-3"><i class="fa-solid fa-ranking-star fa-lg" style="color: rgb(246, 194, 12);"></i></span></div>
+                <div  class="text-white my-5 text-[19px]">Experienced Event Planners</div>
+                <div class="text-orange-100 text-[13px]">Over a decade of orchestrating high-profile ceremonies with exacting, graceful diplomacy, and artistic integrity.</div>
+
+               
+                
+               
+
+
+            </div>
+            <div id="service-cards" class="bg-slate-100/20 p-10  rounded-3xl">
+                <div> <span class="mx-3 my-10 bg-slate-100/20 rounded p-3"><i class="fa-solid fa-paintbrush fa-lg" style="color: rgb(246, 194, 12);"></i></span></div>
+                <div  class="text-white my-5 text-[19px]">Personalized Experiences</div>
+                <div class="text-orange-100 text-[13px]">No carbon copies. Every event palette, spatial layout, and menu is customized around your personal narrative.</div>
+
+               
+
+               
+
+
+            </div>
+            <div id="service-cards" class="bg-slate-100/20 p-10  rounded-3xl">
+                <div> <span class="mx-3 my-10 bg-slate-100/20 rounded p-3"><i class="fa-solid fa-award fa-lg" style="color: rgb(246, 194, 12);"></i></span></div>
+                <div  class="text-white my-5 text-[19px]">Professional Vendors</div>
+                <div class="text-orange-100 text-[13px]">Pre-vetted good-standard florists, master chefs, international audio engineers, and lighting artisans at your command.</div>
+
+                
+            </div>
+            <div id="service-cards" class="bg-slate-100/20 p-10  rounded-3xl">
+                <div> <span class="mx-3 my-10 bg-slate-100/20 rounded p-3"><i class="fa-solid fa-hourglass fa-lg" style="color: rgb(246, 194, 12);"></i></span></div>
+                <div  class="text-white my-5 text-[19px]">Stress-Free Management</div>
+                <div class="text-orange-100 text-[13px]">A dedicated on-site director managing run-of-show cues down to the second, so you can just breathe and enjoy the host.
+
+                </div>
+            </div>
+
+            
+
+    </section>
+    <section>
+        <section class="py-16 bg-gradient-to-r from-slate-900 vi-slate-950  vi-slate-900 to-slate-900 py-5">
+    <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+
+        <!-- Events -->
+        <div class="group">
+            <h2 class="text-4xl font-bold text-amber-400 
+                       transition duration-500 group-hover:scale-110">
+                500+
+            </h2>
+            <p class="mt-2 text-yellow-100">Events Completed</p>
+        </div>
+
+        
+        <div class="group">
+            <h2 class="text-4xl font-bold text-amber-400  
+                       transition duration-500 group-hover:scale-110">
+                250+
+            </h2>
+            <p class="mt-2 text-yellow-100">Happy Clients</p>
+        </div>
+
+        <div class="group">
+            <h2 class="text-4xl font-bold text-amber-400  
+                       transition duration-500 group-hover:scale-110">
+                50+
+            </h2>
+            <p class="mt-2 text-yellow-100">Professional Vendors</p>
+        </div>
+
+    
+        <div class="group">
+            <h2 class="text-4xl font-bold text-amber-400 
+                       transition duration-500 group-hover:scale-110">
+                12+
+            </h2>
+            <p class="mt-2 text-yellow-100">Years of Experience</p>
+        </div>
+
+    </div>
+</section>
+    </section>
+    <section class="bg-[#080d1c] min-h-screen py-12 px-5">
+
+        <div class="max-w-3xl mx-auto">
+
+            <!-- Heading -->
+            <div class="text-center mb-8">
+
+                <p class="text-[#c9a44c] text-xs tracking-[3px] uppercase mb-2">
+                    Inquiries
+                </p>
+
+                <h2 class="text-3xl md:text-4xl font-serif text-white mb-2">
+                    Frequently Asked Questions
+                </h2>
+
+                <p class="text-gray-400 text-sm">
+                    Clear answers to help you begin planning your signature gathering.
+                </p>
+
+            </div>
+
+
+            <!-- FAQ -->
+            <div id="accordion-event"
+                data-accordion="collapse"
+                data-active-classes="text-white"
+                data-inactive-classes="text-gray-300">
+
+
+                <!-- FAQ 1 -->
+                <h2 id="heading-1">
+
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-4 text-sm font-medium text-gray-200 bg-[#171e2e] rounded-lg mb-2"
+                        data-accordion-target="#body-1"
+                        aria-expanded="true"
+                        aria-controls="body-1">
+
+                        <span>
+                            How early should I book an event?
+                        </span>
+
+                        <svg data-accordion-icon
+                            class="w-3 h-3 rotate-180 shrink-0 text-[#c9a44c]"
+                            fill="none"
+                            viewBox="0 0 10 6">
+
+                            <path stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+
+                        </svg>
+
+                    </button>
+
+                </h2>
+
+
+                <div id="body-1"
+                    aria-labelledby="heading-1">
+
+                    <div class="p-4 mb-2 bg-[#171e2e] rounded-lg">
+
+                        <p class="text-gray-400 text-xs leading-5">
+                            We recommend securing your date 3–6 months in advance
+                            for landmark weddings and large corporate galas to
+                            ensure venue reservation and custom fabrication.
+                            For intimate gatherings and private birthday dinners,
+                            a minimum of 4 weeks is advised.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 2 -->
+                <h2 id="heading-2">
+
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-4 text-sm font-medium text-gray-300 bg-[#171e2e] rounded-lg mb-2"
+                        data-accordion-target="#body-2"
+                        aria-expanded="false"
+                        aria-controls="body-2">
+
+                        <span>
+                            Do you provide complete event management?
+                        </span>
+
+                        <svg data-accordion-icon
+                            class="w-3 h-3 shrink-0 text-[#c9a44c]"
+                            fill="none"
+                            viewBox="0 0 10 6">
+
+                            <path stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+
+                        </svg>
+
+                    </button>
+
+                </h2>
+
+
+                <div id="body-2"
+                    class="hidden"
+                    aria-labelledby="heading-2">
+
+                    <div class="p-4 mb-2 bg-[#171e2e] rounded-lg">
+
+                        <p class="text-gray-400 text-xs leading-5">
+                            Yes. Our team provides complete event management
+                            including planning, venue coordination, decoration,
+                            catering, entertainment and event-day coordination.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 3 -->
+                <h2 id="heading-3">
+
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-4 text-sm font-medium text-gray-300 bg-[#171e2e] rounded-lg mb-2"
+                        data-accordion-target="#body-3"
+                        aria-expanded="false"
+                        aria-controls="body-3">
+
+                        <span>
+                            Can I customize an event package?
+                        </span>
+
+                        <svg data-accordion-icon
+                            class="w-3 h-3 shrink-0 text-[#c9a44c]"
+                            fill="none"
+                            viewBox="0 0 10 6">
+
+                            <path stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+
+                        </svg>
+
+                    </button>
+
+                </h2>
+
+
+                <div id="body-3"
+                    class="hidden"
+                    aria-labelledby="heading-3">
+
+                    <div class="p-4 mb-2 bg-[#171e2e] rounded-lg">
+
+                        <p class="text-gray-400 text-xs leading-5">
+                            Absolutely. Every event can be customized based
+                            on your theme, guest count, venue, decoration,
+                            entertainment and budget.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 4 -->
+                <h2 id="heading-4">
+
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-4 text-sm font-medium text-gray-300 bg-[#171e2e] rounded-lg mb-2"
+                        data-accordion-target="#body-4"
+                        aria-expanded="false"
+                        aria-controls="body-4">
+
+                        <span>
+                            Do you provide photography and cinematography?
+                        </span>
+
+                        <svg data-accordion-icon
+                            class="w-3 h-3 shrink-0 text-[#c9a44c]"
+                            fill="none"
+                            viewBox="0 0 10 6">
+
+                            <path stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+
+                        </svg>
+
+                    </button>
+
+                </h2>
+
+
+                <div id="body-4"
+                    class="hidden"
+                    aria-labelledby="heading-4">
+
+                    <div class="p-4 mb-2 bg-[#171e2e] rounded-lg">
+
+                        <p class="text-gray-400 text-xs leading-5">
+                            Yes. We can arrange professional photography
+                            and cinematography services to capture the
+                            important moments of your event.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 5 -->
+                <h2 id="heading-5">
+
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-4 text-sm font-medium text-gray-300 bg-[#171e2e] rounded-lg mb-2"
+                        data-accordion-target="#body-5"
+                        aria-expanded="false"
+                        aria-controls="body-5">
+
+                        <span>
+                            Do you handle corporate conferences outside Kerala?
+                        </span>
+
+                        <svg data-accordion-icon
+                            class="w-3 h-3 shrink-0 text-[#c9a44c]"
+                            fill="none"
+                            viewBox="0 0 10 6">
+
+                            <path stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+
+                        </svg>
+
+                    </button>
+
+                </h2>
+
+
+                <div id="body-5"
+                    class="hidden"
+                    aria-labelledby="heading-5">
+
+                    <div class="p-4 mb-2 bg-[#171e2e] rounded-lg">
+
+                        <p class="text-gray-400 text-xs leading-5">
+                            Yes. We can organize corporate conferences,
+                            meetings and business events across Kerala
+                            and at selected locations outside the state.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 6 -->
+                <h2 id="heading-6">
+
+                    <button type="button"
+                        class="flex items-center justify-between w-full p-4 text-sm font-medium text-gray-300 bg-[#171e2e] rounded-lg"
+                        data-accordion-target="#body-6"
+                        aria-expanded="false"
+                        aria-controls="body-6">
+
+                        <span>
+                            How can I submit a booking request?
+                        </span>
+
+                        <svg data-accordion-icon
+                            class="w-3 h-3 shrink-0 text-[#c9a44c]"
+                            fill="none"
+                            viewBox="0 0 10 6">
+
+                            <path stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 5 5 1 1 5" />
+
+                        </svg>
+
+                    </button>
+
+                </h2>
+
+
+                <div id="body-6"
+                    class="hidden"
+                    aria-labelledby="heading-6">
+
+                    <div class="p-4 bg-[#171e2e] rounded-lg">
+
+                        <p class="text-gray-400 text-xs leading-5">
+                            You can submit your booking request through
+                            our booking page. Provide your event date,
+                            location, event type and requirements, and
+                            our team will contact you.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section> 
+    
+    
+    <!--last page of booking  -->
+
+   <div id="service-cards" class="w-full flex justify-center px-4">
+        
+        <div class="relative max-w-5xl w-full bg-[#121622] border border-gray-800/60 rounded-[2.5rem] py-16 px-6 md:px-12 text-center shadow-2xl overflow-hidden">
+            
+
+            
+            <div class="relative  flex flex-col items-center">
+                
+                
+                <span class="text-amber-400 text-[11px] md:text-xs tracking-[0.25em] font-medium uppercase mb-4">
+                    START THE CONVERSATION
+                </span>
+
+                
+                <h2 class="text-3xl md:text-5xl font-serif text-gray-100 font-normal tracking-wide mb-5">
+                    Let's Create Something Unforgettable
+                </h2>
+
+                
+                <p class="text-gray-400 text-sm md:text-base max-w-lg mb-10 leading-relaxed font-light">
+                    Tell us about your event and our master planners will engineer an extraordinary celebration tailored exclusively for you.
+                </p>
+
+                <!--  -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
+                    
+                    
+                    <button type="button" class="text-gray-950 bg-yellow-400 hover:bg-yellow-500 font-medium rounded-full text-sm px-7 py-3.5 text-center transition-all duration-300 ">
+                        <a href="booking.html">Start Planning Your Event</a>
+                    </button>
+
+                    
+                    <button type="button" class="text-gray-300 bg-[#191e2b] hover:bg-[#202637] border border-yellow-400    font-medium rounded-full text-sm px-7 py-3.5 text-center inline-flex items-center gap-2.5 ">
+                        <!-- Phone Icon -->
+                        <svg class="w-4 h-4 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 19 18">
+                            <path d="M18.475 15.55l-4.1-3.6a1.139 1.139 0 0 0-1.5.057l-1.576 1.432a10.468 10.468 0 0 1-5.074-5.074l1.432-1.576a1.14 1.14 0 0 0 .057-1.5l-3.6-4.1a1.14 1.14 0 0 0-1.62-.057L.82 2.652A1.708 1.708 0 0 0 .45 4.103c.245 4.3 2.13 8.355 5.258 11.483s7.182 5.013 11.483 5.258a1.708 1.708 0 0 0 1.451-.37l1.758-1.547a1.14 1.14 0 0 0-.017-1.626z"/>
+                        </svg>
+                        +91 98765 43210
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer class="text-white px-6 sm:px-10 lg:px-14 pt-8 pb-4">
+
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-10 lg:gap-16">
+
+        
+        <div>
+            <div class="flex items-center gap-2 mb-5">
+                <img
+                    src="./images/logo.png"
+                    alt="Eventurelation Logo"
+                    class="w-28 sm:w-32 h-auto"
+                >
+
+                <h2 class="text-2xl sm:text-3xl font-serif">
+                    Eventurelation
+                </h2>
+            </div>
+
+            <p class="text-[#e9c875] text-sm leading-5 max-w-sm mb-6">
+                Creating unforgettable experiences, one event at a time.
+            </p>
+
+            <div class="flex gap-3">
+                <a href="#"
+                   class="w-10 h-10 rounded-full flex items-center justify-center
+                          text-[#e9c875] border border-gray-700
+                          hover:text-[#f2c94c] transition">
+                    <i class="fa-solid fa-camera"></i>
+                </a>
+
+                <a href="#"
+                   class="w-10 h-10 rounded-full flex items-center justify-center
+                          text-[#e9c875] border border-gray-700
+                          hover:text-[#f2c94c] transition">
+                    <i class="fa-solid fa-share-nodes"></i>
+                </a>
+
+                <a href="#"
+                   class="w-10 h-10 rounded-full flex items-center justify-center
+                          text-[#e9c875] border border-gray-700
+                          hover:text-[#f2c94c] transition">
+                    <i class="fa-solid fa-calendar"></i>
+                </a>
+
+                <a href="#"
+                   class="w-10 h-10 rounded-full flex items-center justify-center
+                          text-[#e9c875] border border-gray-700
+                          hover:text-[#f2c94c] transition">
+                    <i class="fa-solid fa-play"></i>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- RIGHT -->
+        <div>
+
+            <!-- Newsletter -->
+            <div class="border border-gray-700 rounded-xl
+                        p-5 sm:p-6
+                        grid grid-cols-1 md:grid-cols-[1fr_auto]
+                        gap-5 items-center">
+
+                <div>
+                    <h3 class="text-[#f2c94c] text-lg font-semibold mb-2">
+                        Join the Privileged Circle
+                    </h3>
+
+                    <p class="text-gray-300 text-xs sm:text-sm leading-5 max-w-md">
+                        Receive exclusive invitations, showcase previews, and
+                        private booking access.
+                    </p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-2">
+                    <input
+                        type="email"
+                        placeholder="Your email address"
+                        class="w-full sm:w-60 h-10 px-4 rounded-full
+                               border border-gray-700
+                               text-white text-xs
+                               outline-none
+                               placeholder:text-gray-500"
+                    >
+
+                    <button
+                        class="h-10 px-5 rounded-full
+                               bg-[#f2c94c] text-black
+                               text-xs font-semibold
+                               hover:bg-[#e5b936] transition">
+                        Subscribe
+                    </button>
+                </div>
+
+            </div>
+
+
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-6">
+
+               
+                <div>
+                    <h4 class="text-[#f2c94c] text-xs font-bold mb-4">
+                        COMPANY
+                    </h4>
+
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#events">Our Events</a></li>
+                        <li><a href="#services">Services</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-[#f2c94c] text-xs font-bold mb-4">
+                        QUICK LINKS
+                    </h4>
+
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="registration.html">Register</a></li>
+                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-[#f2c94c] text-xs font-bold mb-4">
+                        SERVICES
+                    </h4>
+
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li><a href="#">Weddings</a></li>
+                        <li><a href="#">Birthdays</a></li>
+                        <li><a href="#">Photography</a></li>
+                        <li><a href="#">Corporate Events</a></li>
+                        <li><a href="#">Workshops</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-[#f2c94c] text-xs font-bold mb-4">
+                        CONTACT
+                    </h4>
+
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li>Kochi, Kerala, India</li>
+                        <li>hello@Eventurelation.com</li>
+                        <li>+91 98765 43210</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Bottom -->
+    <div class="border-t border-gray-800 mt-10 pt-5
+                grid grid-cols-1 md:grid-cols-2
+                gap-4 items-center">
+
+        <p class="text-xs text-gray-300">
+            © 2026 Eventurelation. All Rights Reserved.
+        </p>
+
+        <div class="flex flex-wrap md:justify-end gap-5
+                    text-xs text-gray-300">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Security Standard</a>
+        </div>
+
+    </div>
+
+</footer>
+    
+<!-- GSAP  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<!-- GSAP ScrollTrigger  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+// navigation bar 
+gsap.from("#navbar", {
+    y: -100,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+});
+
+gsap.from("#hero-badge", {
+    y: 30,
+    opacity: 0,
+    duration: 0.8,
+    delay: 0.3,
+    ease: "power3.out"
+});
+
+gsap.from("#hero-title", {
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    delay: 0.5,
+    ease: "power3.out"
+});
+
+gsap.from("#hero-description", {
+    y: 30,
+    opacity: 0,
+    duration: 0.8,
+    delay: 0.8,
+    ease: "power3.out"
+});
+
+gsap.from("#hero-buttons", {
+    y: 30,
+    opacity: 0,
+    duration: 0.8,
+    delay: 1,
+    ease: "power3.out"
+});
+
+// scroll 
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".portfolio-card", {
+    scale: 0.8,
+    opacity: 0,
+    duration: 5,
+    stagger: 0.3,
+    ease: "back.out(1.7)",
+
+    scrollTrigger: {
+        trigger: "#events",
+        start: "top 80%",
+        toggleActions: "play none none reverse"
+    }
+});
+
+// service 
+gsap.from("#service-cards > div", {
+    y: 60,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.15,
+    ease: "power3.out",
+
+    scrollTrigger: {
+        trigger: "#service-cards",
+        start: "top 80%",
+        toggleActions: "play none none reverse"
+    }
+});
+</script>
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+</script>
+<!-- flowbite  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.js">
+</script>
+</body>
+
+</html>

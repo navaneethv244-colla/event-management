@@ -1,0 +1,341 @@
+<!-- NAVBAR -->
+<nav class="w-full bg-[#0B0F1C] px-4 sm:px-6 lg:px-8 py-4 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+
+        <!-- LOGO -->
+        <img 
+            src="./images/logo.png"
+            alt="Eventurelation Logo"
+            class="w-25 h-16 sm:w-20 sm:h-20 object-contain"
+        >
+
+        <!-- DESKTOP MENU -->
+        <ul class="hidden lg:flex items-center gap-1 xl:gap-2">
+
+            <li>
+                <a href="home.html"
+                    class="block px-3 xl:px-4 py-2 rounded-xl text-[#8F897E] hover:text-[#F5CF6A] hover:bg-[#252A39] transition">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href=""
+                    class="block px-3 xl:px-4 py-2 rounded-xl text-[#8F897E] hover:text-[#F5CF6A] hover:bg-[#252A39] transition">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="#"
+                    class="block px-3 xl:px-4 py-2 rounded-xl text-[#8F897E] hover:text-[#F5CF6A] hover:bg-[#252A39] transition">
+                    Events
+                </a>
+            </li>
+
+            <li>
+                <a href="#"
+                    class="block px-3 xl:px-4 py-2 rounded-xl text-[#8F897E] hover:text-[#F5CF6A] hover:bg-[#252A39] transition">
+                    Services
+                </a>
+            </li>
+
+            <li>
+                <a href="booking.html"
+                    class="block px-3 xl:px-4 py-2 rounded-xl text-[#8F897E] hover:text-[#F5CF6A] hover:bg-[#252A39] transition">
+                    Booking
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html"
+                    class="block px-3 xl:px-4 py-2 rounded-xl text-[#8F897E] hover:text-[#F5CF6A] hover:bg-[#252A39] transition">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+
+        <!-- DESKTOP BUTTONS -->
+        <div class="hidden lg:flex items-center gap-2">
+
+            <button
+                class="text-white px-5 py-2 border border-gray-400 rounded-3xl font-semibold hover:border-[#D4AF37] transition">
+                <a href="login.html">Login</a>
+            </button>
+
+            <button
+                class="text-black bg-[#D4AF37] px-5 py-3 rounded-3xl font-semibold hover:bg-[#F5CF6A] transition">
+                <a href="registration.html">Register</a>
+            </button>
+
+            <button class="p-2">
+                <i class="fa-solid fa-circle-user fa-xl"
+                    style="color: rgb(255, 212, 59);">
+                </i>
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE HAMBURGER -->
+        <button
+            type="button"
+            data-drawer-target="mobile-navigation"
+            data-drawer-show="mobile-navigation"
+            aria-controls="mobile-navigation"
+            class="lg:hidden text-white text-2xl p-2 hover:text-[#F5CF6A] transition">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+</nav>
+
+
+<!-- ========================= -->
+<!-- MOBILE SIDE DRAWER -->
+<!-- ========================= -->
+
+<div
+    id="mobile-navigation"
+    class="fixed top-0 left-0 z-[60] h-screen w-80 max-w-[85%]
+           p-5 overflow-y-auto
+           transition-transform -translate-x-full
+           bg-[#0B0F1C]
+           border-r border-[#252A39]"
+    tabindex="-1"
+    aria-labelledby="mobile-navigation-label">
+
+
+    <!-- DRAWER HEADER -->
+    <div class="flex items-center justify-between pb-5 border-b border-[#252A39]">
+
+        <div class="flex items-center gap-3">
+
+            <img
+                src="./images/logo.png"
+                alt="Eventurelation Logo"
+                class="w-16 h-12 object-contain">
+
+            <span
+                id="mobile-navigation-label"
+                class="text-white text-lg font-semibold">
+                Eventurelation
+            </span>
+
+        </div>
+
+
+        <!-- CLOSE BUTTON -->
+        <button
+            type="button"
+            data-drawer-hide="mobile-navigation"
+            aria-controls="mobile-navigation"
+            class="text-[#8F897E] hover:text-[#F5CF6A]
+                   hover:bg-[#252A39]
+                   rounded-xl w-10 h-10
+                   flex items-center justify-center
+                   transition">
+
+            <i class="fa-solid fa-xmark text-xl"></i>
+
+            <span class="sr-only">
+                Close menu
+            </span>
+
+        </button>
+
+    </div>
+
+
+    <!-- MOBILE MENU -->
+    <div class="py-6">
+
+        <ul class="space-y-2 font-medium">
+
+
+            <!-- HOME -->
+            <li>
+                <a
+                    href="home.html"
+                    class="flex items-center px-4 py-3
+                           text-[#8F897E]
+                           rounded-xl
+                           hover:bg-[#252A39]
+                           hover:text-[#F5CF6A]
+                           transition">
+
+                    <i class="fa-solid fa-house w-6"></i>
+
+                    <span class="ml-3">
+                        Home
+                    </span>
+
+                </a>
+            </li>
+
+
+            <!-- ABOUT -->
+            <li>
+                <a
+                    href="#"
+                    class="flex items-center px-4 py-3
+                           text-[#8F897E]
+                           rounded-xl
+                           hover:bg-[#252A39]
+                           hover:text-[#F5CF6A]
+                           transition">
+
+                    <i class="fa-solid fa-circle-info w-6"></i>
+
+                    <span class="ml-3">
+                        About
+                    </span>
+
+                </a>
+            </li>
+
+
+            <!-- EVENTS -->
+            <li>
+                <a
+                    href="#"
+                    class="flex items-center px-4 py-3
+                           text-[#8F897E]
+                           rounded-xl
+                           hover:bg-[#252A39]
+                           hover:text-[#F5CF6A]
+                           transition">
+
+                    <i class="fa-solid fa-calendar-days w-6"></i>
+
+                    <span class="ml-3">
+                        Events
+                    </span>
+
+                </a>
+            </li>
+
+
+            <!-- SERVICES -->
+            <li>
+                <a
+                    href="#"
+                    class="flex items-center px-4 py-3
+                           text-[#8F897E]
+                           rounded-xl
+                           hover:bg-[#252A39]
+                           hover:text-[#F5CF6A]
+                           transition">
+
+                    <i class="fa-solid fa-briefcase w-6"></i>
+
+                    <span class="ml-3">
+                        Services
+                    </span>
+
+                </a>
+            </li>
+
+
+            <!-- BOOKING -->
+            <li>
+                <a
+                    href="booking.html"
+                    class="flex items-center px-4 py-3
+                           text-[#8F897E]
+                           rounded-xl
+                           hover:bg-[#252A39]
+                           hover:text-[#F5CF6A]
+                           transition">
+
+                    <i class="fa-solid fa-calendar-check w-6"></i>
+
+                    <span class="ml-3">
+                        Booking
+                    </span>
+
+                </a>
+            </li>
+
+
+            <!-- CONTACT -->
+            <li>
+                <a
+                    href="contact.html"
+                    class="flex items-center px-4 py-3
+                           text-[#8F897E]
+                           rounded-xl
+                           hover:bg-[#252A39]
+                           hover:text-[#F5CF6A]
+                           transition">
+
+                    <i class="fa-solid fa-envelope w-6"></i>
+
+                    <span class="ml-3">
+                        Contact
+                    </span>
+
+                </a>
+            </li>
+
+
+            <!-- DIVIDER -->
+            <li class="py-3">
+                <div class="border-t border-[#252A39]"></div>
+            </li>
+
+
+            <!-- LOGIN -->
+            <li>
+                <a
+                    href="login.html"
+                    class="flex items-center px-4 py-3
+                           text-[#8F897E]
+                           rounded-xl
+                           hover:bg-[#252A39]
+                           hover:text-[#F5CF6A]
+                           transition">
+
+                    <i class="fa-solid fa-right-to-bracket w-6"></i>
+
+                    <span class="ml-3">
+                        Login
+                    </span>
+
+                </a>
+            </li>
+
+
+            <!-- REGISTER -->
+            <li>
+                <a
+                    href="registration.html"
+                    class="flex items-center px-4 py-3
+                           text-black
+                           bg-[#D4AF37]
+                           rounded-xl
+                           hover:bg-[#F5CF6A]
+                           transition">
+
+                    <i class="fa-solid fa-user-plus w-6"></i>
+
+                    <span class="ml-3 font-semibold">
+                        Register
+                    </span>
+
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+
+<!-- FLOWBITE JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.js"></script>

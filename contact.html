@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+< lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <!-- tailwind  -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <!-- font awsome  -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+     <!-- google fonts  -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-[#0E1321]">
+   <nav class="w-full bg-[#0B0F1C] px-4 sm:px-6 lg:px-8 py-4 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+
+        <!-- LOGO -->
+        <img 
+            src="./images/logo.png"
+            alt="Eventurelation Logo"
+            class="w-25 h-16 sm:w-20 sm:h-20 object-contain"
+        >
+
+        <!-- DESKTOP MENU -->
+        <ul class="hidden lg:flex items-center gap-1 xl:gap-2">
+
+            <li>
+                <a href="home.html"
+                    class="block px-3 xl:px-4 py-2 rounded-xl text-[#8F897E] hover:text-[#F5CF6A] hover:bg-[#252A39] transition">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="home.html#about"
+                    class="block px-3 xl:px-4 py-2 rounded-xl text-[#8F897E] hover:text-[#F5CF6A] hover:bg-[#252A39] transition">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="home.html#events"
+                    class="block px-3 xl:px-4 py-2 rounded-xl text-[#8F897E] hover:text-[#F5CF6A] hover:bg-[#252A39] transition">
+                    Events
+                </a>
+            </li>
+
+            <li>
+                <a href="home.html#services"
+                    class="block px-3 xl:px-4 py-2 rounded-xl text-[#8F897E] hover:text-[#F5CF6A] hover:bg-[#252A39] transition">
+                    Services
+                </a>
+            </li>
+
+            <li>
+                <a href="booking.html"
+                    class="block px-3 xl:px-4 py-2 rounded-xl text-[#8F897E] hover:text-[#F5CF6A] hover:bg-[#252A39] transition">
+                    Booking
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html"
+                    class="block px-3 xl:px-4 py-2 rounded-xl text-[#8F897E] hover:text-[#F5CF6A] hover:bg-[#252A39] transition">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+
+        <!-- DESKTOP BUTTONS -->
+        <div class="hidden lg:flex items-center gap-2">
+
+            <button
+                class="text-white px-5 py-2 border border-gray-400 rounded-3xl font-semibold hover:border-[#D4AF37] transition">
+                <a href="login.html">Login</a>
+            </button>
+
+            <button
+                class="text-black bg-[#D4AF37] px-5 py-3 rounded-3xl font-semibold hover:bg-[#F5CF6A] transition">
+                <a href="registration.html">Register</a>
+            </button>
+
+            <button class="p-2">
+                <i class="fa-solid fa-circle-user fa-xl"
+                    style="color: rgb(255, 212, 59);">
+                </i>
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE HAMBURGER -->
+        <button
+            type="button"
+            data-drawer-target="mobile-navigation"
+            data-drawer-show="mobile-navigation"
+            aria-controls="mobile-navigation"
+            class="lg:hidden text-white text-2xl p-2 hover:text-[#F5CF6A] transition">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </div>
+</nav>
+
+<div
+    id="mobile-navigation"
+    class="fixed top-0 left-0 z-[60] h-screen w-80 max-w-[85%]
+           p-5 overflow-y-auto
+           transition-transform -translate-x-full
+           bg-[#0B0F1C]
+           border-r border-[#252A39]"
+    tabindex="-1"
+    aria-labelledby="mobile-navigation-label">
+
+
+    <!-- DRAWER HEADER -->
+    <div class="flex items-center justify-between pb-5 border-b border-[#252A39]">
+
+        <div class="flex items-center gap-3">
+
+            <img
+                src="./images/logo.png"
+                alt="Eventurelation Logo"
+                class="w-16 h-12 object-contain">
+
+            <span
+                id="mobile-navigation-label"
+                class="text-white text-lg font-semibold">
+                Eventurelation
+            </span>
+
+        </div>
+
+
+        <!-- CLOSE BUTTON -->
+        <button
+            type="button"
+            data-drawer-hide="mobile-navigation"
+            aria-controls="mobile-navigation"
+            class="text-[#8F897E] hover:text-[#F5CF6A]
+                   hover:bg-[#252A39]
+                   rounded-xl w-10 h-10
+                   flex items-center justify-center
+                   transition">
+
+            <i class="fa-solid fa-xmark text-xl"></i>
+
+            <span class="sr-only">
+                Close menu
+            </span>
+
+        </button>
+
+    </div>
+
+
+    <!-- MOBILE MENU -->
+    <div class="py-6">
+
+        <ul class="space-y-2 font-medium">
+
+
+            <!-- HOME -->
+            <li>
+                <a
+                    href="home.html"
+                    class="flex items-center px-4 py-3
+                           text-[#8F897E]
+                           rounded-xl
+                           hover:bg-[#252A39]
+                           hover:text-[#F5CF6A]
+                           transition">
+
+                    <i class="fa-solid fa-house w-6"></i>
+
+                    <span class="ml-3">
+                        Home
+                    </span>
+
+                </a>
+            </li>
+
+
+            <!-- ABOUT -->
+            <li>
+                <a
+                    href="#"
+                    class="flex items-center px-4 py-3
+                           text-[#8F897E]
+                           rounded-xl
+                           hover:bg-[#252A39]
+                           hover:text-[#F5CF6A]
+                           transition">
+
+                    <i class="fa-solid fa-circle-info w-6"></i>
+
+                    <span class="ml-3">
+                        About
+                    </span>
+
+                </a>
+            </li>
+
+
+            <!-- EVENTS -->
+            <li>
+                <a
+                    href="#"
+                    class="flex items-center px-4 py-3
+                           text-[#8F897E]
+                           rounded-xl
+                           hover:bg-[#252A39]
+                           hover:text-[#F5CF6A]
+                           transition">
+
+                    <i class="fa-solid fa-calendar-days w-6"></i>
+
+                    <span class="ml-3">
+                        Events
+                    </span>
+
+                </a>
+            </li>
+
+
+            <!-- SERVICES -->
+            <li>
+                <a
+                    href="home.html#services"
+                    class="flex items-center px-4 py-3
+                           text-[#8F897E]
+                           rounded-xl
+                           hover:bg-[#252A39]
+                           hover:text-[#F5CF6A]
+                           transition">
+
+                    <i class="fa-solid fa-briefcase w-6"></i>
+
+                    <span class="ml-3">
+                        Services
+                    </span>
+
+                </a>
+            </li>
+
+
+            <!-- BOOKING -->
+            <li>
+                <a
+                    href="booking.html"
+                    class="flex items-center px-4 py-3
+                           text-[#8F897E]
+                           rounded-xl
+                           hover:bg-[#252A39]
+                           hover:text-[#F5CF6A]
+                           transition">
+
+                    <i class="fa-solid fa-calendar-check w-6"></i>
+
+                    <span class="ml-3">
+                        Booking
+                    </span>
+
+                </a>
+            </li>
+
+
+            <!-- CONTACT -->
+            <li>
+                <a
+                    href="contact.html"
+                    class="flex items-center px-4 py-3
+                           text-[#8F897E]
+                           rounded-xl
+                           hover:bg-[#252A39]
+                           hover:text-[#F5CF6A]
+                           transition">
+
+                    <i class="fa-solid fa-envelope w-6"></i>
+
+                    <span class="ml-3">
+                        Contact
+                    </span>
+
+                </a>
+            </li>
+
+
+            <!-- DIVIDER -->
+            <li class="py-3">
+                <div class="border-t border-[#252A39]"></div>
+            </li>
+
+
+            <!-- LOGIN -->
+            <li>
+                <a
+                    href="login.html"
+                    class="flex items-center px-4 py-3
+                           text-[#8F897E]
+                           rounded-xl
+                           hover:bg-[#252A39]
+                           hover:text-[#F5CF6A]
+                           transition">
+
+                    <i class="fa-solid fa-right-to-bracket w-6"></i>
+
+                    <span class="ml-3">
+                        Login
+                    </span>
+
+                </a>
+            </li>
+
+
+            <!-- REGISTER -->
+            <li>
+                <a
+                    href="registration.html"
+                    class="flex items-center px-4 py-3
+                           text-black
+                           bg-[#D4AF37]
+                           rounded-xl
+                           hover:bg-[#F5CF6A]
+                           transition">
+
+                    <i class="fa-solid fa-user-plus w-6"></i>
+
+                    <span class="ml-3 font-semibold">
+                        Register
+                    </span>
+
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+    <section class="w-full h-auto">
+            <div>
+                <h1 class="text-[#D4AF37] text-center text-xs font-[family-name:'Plus Jakarta Sans'] font-semibold pt-[8%]">Get in touch</h1>
+                <h1 class="font-[family-name:'PlayfairDisplay'] text-center text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl pt-[2%]">Let'sTalk About Your <span class="text-5xl font-semibold text-[#D4AF37]"><i>Event</i></span></h1>
+                <p class="text-center  text-white px-5 sm:px-10 md:px-[15%] lg:px-[27%] font-thin">Have a question or a grand vision in mind? We would love to hear from you.Our archestors stand ready to translate your aspiration into an architectural reality.</p>
+                <div class="w-[90%] mx-auto my-[5%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 bg-slate-900 rounded-lg p-5">
+                    <div class="bg-[#161b2a] rounded-lg p-4">
+                        <h1 class="text-center font-semibold text-[#D4AF37]">4h</h1>
+                        <p class="text-white text-center font-thin">Responsive Window</p>
+                    </div>
+                    <div class="bg-[#161B2A] rounded-lg p-4">
+                        <h1 class="text-center font-semibold text-[#D4AF37]">100%</h1>
+                        <p class="text-white text-center font-thin">Confidence Care</p>
+                    </div>
+                    <div class="bg-[#161B2A] rounded-lg p-4">
+                        <h1 class="text-center font-semibold text-[#D4AF37]">Kochi&Global</h1>
+                        <p class="text-white text-center font-thin">Presence</p>
+                    </div>
+                    <div class="bg-[#161B2A] rounded-lg p-4">
+                        <h1 class="text-center font-semibold text-[#D4AF37]">1:1</h1>
+                        <p class="text-white text-center font-thin">Dedicated Lead</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="w-full h-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-5">
+                <div class="col1 p-5">
+                    <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-5">
+                        <div class="bg-slate-500/10 border border-[#3A4050] rounded-lg p-5 flex flex-col">
+                            <div class="flex h-10 w-10 text-[#D4AF37] items-center justify-center bg-[#252B3A] border border-[#3A4050] rounded-lg">
+                                    <ion-icon name="location-outline"></ion-icon>
+                            </div>
+                            <h1 class="text-[#D4AF37] text-xs pt-2 font-md">ATELIER</h1>
+                            <h1 class="text-white font-semibold">Visit Our Atelier</h1>
+                            <p class="text-white font-thin text-xs pt-2">Marine Drive,Kochi,Kerala 682031,India</p>
+                            <p class="text-[#D4AF37] text-xs font-semibold mt-auto pt-5">Get Directions <ion-icon name="arrow-forward-outline"></ion-icon></p>
+                        </div>
+                        <div class="bg-slate-500/10 border border-[#3A4050] rounded-lg p-5 flex flex-col">
+                            <div class="flex h-10 w-10 text-[#D4AF37] items-center justify-center bg-[#252B3A] border border-[#3A4050] rounded-lg">
+                                    <ion-icon name="mail-outline"></ion-icon>
+                            </div>
+                            <h1 class="text-[#D4AF37] text-xs pt-2 font-md">INQUIRIES</h1>
+                            <h1 class="text-white">Email Us Directly</h1>
+                            <p class="text-white font-thin text-xs pt-2">hello@eventurelation.com</p>
+                            <p class="text-white font-thin text-xs">press@eventurelation.com</p>
+                            <p class="text-[#D4AF37] text-xs  mt-auto pt-5">Reply whithin 4 hours</p>
+                        </div>
+                        <div class="bg-slate-500/10 border border-[#3A4050] rounded-lg p-5 flex flex-col">
+                            <div class="flex h-10 w-10 text-[#D4AF37] items-center justify-center bg-[#252B3A] border border-[#3A4050] rounded-lg">
+                                    <ion-icon name="call-outline"></ion-icon>
+                            </div>
+                            <h1 class="text-[#D4AF37] text-xs pt-2 font-md">PRIVATE LINE</h1>
+                            <h1 class="text-white">Call Our Concierge</h1>
+                            <p class="text-white">+919876543210</p>
+                            <p class="text-gray-400 font-thin text-xs">Mon-sat,9AM-8PMIST</p>
+                            <p class="text-[#D4AF37] text-xs font-semibold mt-auto pt-5">Connect Now <ion-icon name="call-outline"></ion-icon></p>
+                        </div>
+                    </div>
+                    <div class="h-[400px] md:h-[500px] w-full  my-5 bg-[url('./images/screen.png')] bg-cover bg-center border rounded-lg">
+                        <div class="h-8 w-50 bg-black flex items-center justify-center rounded-lg m-[2%]">
+                            <h1 class="text-xs text-white font-semibold">CREATIVE HEADQUATERS</h1>
+                        </div>
+                        <div class="w-full flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mt-[220px] md:mt-[320px] p-4">
+                            <div>
+                                <h1 class="text-white text-3xl font-semibold">Eventurelation Design Studio</h1>
+                                <p class="text-[#D4AF37] font-semibold"><ion-icon name="location-outline"></ion-icon>Marine Drive Promenade.Kochi,Kerala</p>
+                            </div>
+                            <div class="bg-gray-700 rounded-lg h-10 w-60 flex items-center justify-center">
+                                <p class="text-white text-sm font-semibold">By Private Appoinment Only</p>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="w-full bg-slate-500/10 rounded-lg">
+                            <div class="w-full flex items-center justify-between p-[2%]">
+                                <div class="flex">
+                                    <div class="flex h-10 w-10 text-[#D4AF37] items-center justify-center bg-[#252B3A] border border-[#3A4050] rounded-lg">
+                                        <ion-icon name="compass-outline"></ion-icon>
+                                    </div>
+                                    <div class="ps-[2%] w-55">
+                                        <h3 class="text-white">Atelier Coordinaties</h3>
+                                        <p class="text-gray-400 font-thin text-sm">9.9816 n, 76.2753 E Malabar Coast</p>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-700 rounded-2xl flex items-center justify-center h-6 w-50">
+                                    <h4 class="text-white text-sm px-[2%]">Open in Google Maps</h4>
+                                </div>
+
+                            </div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d180428.17283996873!2d75.99495308671874!3d9.977963699999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d4defe02971%3A0xe6461708e14347d2!2sCentre%20Square%20Mall!5e1!3m2!1sen!2sin!4v1788833354950!5m2!1sen!2sin"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" class="w-full h-80 p-[2%] rounded-[30px]"></iframe>
+                        </div>
+
+                </div>
+                <div class="col2 bg-slate-500/10 w-[90%] h-auto m-5 p-5 rounded-xl">
+                    <h6 class="text-[#D4AF37] text-xs font-semibold">DIRECT INSCRIPTION</h6>
+                    <h1 class="text-white font-[family-name:'PlayfairDisplay'] text-3xl md:text-4xl lg:text-5xl">Send Us a Message</h1>
+                    <p class="text-gray-400">We will connect you with a dedicated event manager tailored to your protfolio requirements.</p>
+                    <form id="contact-form" action="">
+                       <div class="mt-5">
+                            <div>
+                                 <label for="" class="text-white font-semibold">Your Full Name</label>
+                            </div>
+                            <div class="text-white bg-[#090E1C] p-[4%] w-[70%] rounded-2xl mt-5">
+                                <ion-icon name="person-outline"></ion-icon><input  type="text" placeholder="e.g.Alistair Sterling" class="ms-5 border-none hover-none border-none outline-none focus:border-none focus:outline-none">
+                            </div>
+                       </div>
+                       <div class="mt-5">
+                            <div>
+                                <label for="" class="text-white font-semibold">Email Address</label>
+                            </div>
+                            <div>
+                                <div class="text-white bg-[#090E1C] p-[4%] w-[70%] rounded-2xl mt-5">
+                                    <ion-icon name="at-circle-outline"></ion-icon><input  type="text" placeholder="e.g.name@domain.com" class="ms-5 border-none hover-none border-none outline-none
+         focus:border-none focus:outline-none">
+                                </div>
+                            </div>
+                       </div>
+                       <div class="mt-5">
+                            <div>
+                                <label for="" class="text-white font-semibold">Phone Number</label>
+                            </div>
+                            <div class="text-white bg-[#090E1C] p-[4%] w-[70%] rounded-2xl mt-5">
+                                <input  type="text" placeholder="+910000000000" class="ms-5 border-none hover-none border-none outline-none focus:border-none focus:outline-none">
+                            </div>
+                       </div>
+                       <div class="mt-5">
+                            <div>
+                                <label for="" class="text-white font-semibold">Subject/inquiry Type</label>
+                            </div>
+                            <div class="text-white bg-[#090E1C] p-[4%] w-[70%] rounded-2xl mt-5">
+                                 <select name="" id="">
+                                <option class="text-black" value=""> private Event & Gala Design</option>
+                                <option class="text-black" value=""> Wedding & Reception</option>
+                                <option class="text-black" value=""> Birthday Celebration</option>
+                                <option class="text-black" value=""> Baby Shower</option>
+                            </select>
+                            </div>
+                       </div>
+                       <div>
+                            <div class="flex justify-between mt-2">
+                                <h6 class="text-white">Your Message</h6>
+                            </div>
+                            <div class="text-white bg-[#090E1C] p-[4%] w-[90%] rounded-2xl mt-5">
+                                    <textarea class="w-full h-auto outline-none" name="" id="" placeholder="Describe your intended date.estimated gust count.or bespoke requests..."></textarea>
+                            </div>
+                       </div>
+                       <div class="text-center w-full mt-5">
+                            <button class="bg-yellow-400 p-3 rounded-lg px-6">Send Message</button>
+                       </div>
+                    </form>
+                    <div class="flex justify-between w-full mt-5">
+                        <h6 class="text-gray-400 text-xs font-md"><ion-icon name="lock-closed-outline"></ion-icon>256-bit Encrypted</h6>
+                        <h6 class="text-gray-400 text-xs font-md">Non-Disclosure Assured</h6>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="w-full h-auto bg-[#191A1F]">
+        <div class="w-full flex justify-between">
+            <div>
+                <h6 class="text-[#D4AF37] text-xs font-semibold">PRE-CONSULTATION GUIDE</h6>
+                <H3 class="text-white text-4xl font-[family-name:'PlayfairDisplay']">Frequently Asked Inquriyies</H3>
+            </div>
+            <div class="w-1/2 px-[50px]">
+                <p class="text-gray-400 font-thin text-sm">Everything you need to know before initiating a bespoke event engagement with Eventurelation Atelier.</p>
+            </div>
+        </div>
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 p-5">
+            <div class="bg-slate-500/10 rounded-lg m-5">
+                <h3 class="text-white font-semibold text-2xl">How far in advance should we engage?</h3>
+                <p class="text-white text-justify text-sm font-thin">For major summits.destination weddings,and full-scale 
+                    galas,we recommended minimum window of 3 to 6
+                    months.For intimate private salons,4 to 6 weeks is preferred.
+                </p>
+            </div>
+            <div class="bg-slate-500/10 rounded-lg m-5">
+                <h3 class="text-white font-semibold text-2xl">Do you operate outside kerala?</h3>
+                <p class="text-white text-justify text-sm font-thin">Yes.While our primary studio overlooks the malabar coast in kochi,we orchestrate landmark events throughout Mumbai,Dubai,
+                    London,and Lake Como.</p>
+            </div>
+            <div class="bg-slate-500/10 rounded-lg m-5">
+                <h3 class="text-white font-semibold text-2xl">Can schedule an in-person salon?</h3>
+                <p class="text-white text-justify text-sm font-thin">Certainly.Once you submit your inquiry,our concierge team will arrange private access to our Marine Drive design ateelier with hampagne
+                    & texttile previews.
+                </p>
+            </div>
+        </div>
+    </section>
+     <footer class="text-white px-6 sm:px-10 lg:px-14 pt-8 pb-4">
+
+    <!-- Main Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-10 lg:gap-16">
+
+        <!-- LEFT -->
+        <div>
+            <!-- Logo -->
+            <div class="flex items-center gap-2 mb-5">
+                <img
+                    src="./images/logo.png"
+                    alt="Eventurelation Logo"
+                    class="w-28 sm:w-32 h-auto"
+                >
+
+                <h2 class="text-2xl sm:text-3xl font-serif">
+                    Eventurelation
+                </h2>
+            </div>
+
+            <p class="text-[#e9c875] text-sm leading-5 max-w-sm mb-6">
+                Creating unforgettable experiences, one event at a time.
+            </p>
+
+            <!-- Social Icons -->
+            <div class="flex gap-3">
+                <a href="#"
+                   class="w-10 h-10 rounded-full flex items-center justify-center
+                          text-[#e9c875] border border-gray-700
+                          hover:text-[#f2c94c] transition">
+                    <i class="fa-solid fa-camera"></i>
+                </a>
+
+                <a href="#"
+                   class="w-10 h-10 rounded-full flex items-center justify-center
+                          text-[#e9c875] border border-gray-700
+                          hover:text-[#f2c94c] transition">
+                    <i class="fa-solid fa-share-nodes"></i>
+                </a>
+
+                <a href="#"
+                   class="w-10 h-10 rounded-full flex items-center justify-center
+                          text-[#e9c875] border border-gray-700
+                          hover:text-[#f2c94c] transition">
+                    <i class="fa-solid fa-calendar"></i>
+                </a>
+
+                <a href="#"
+                   class="w-10 h-10 rounded-full flex items-center justify-center
+                          text-[#e9c875] border border-gray-700
+                          hover:text-[#f2c94c] transition">
+                    <i class="fa-solid fa-play"></i>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- RIGHT -->
+        <div>
+
+            <!-- Newsletter -->
+            <div class="border border-gray-700 rounded-xl
+                        p-5 sm:p-6
+                        grid grid-cols-1 md:grid-cols-[1fr_auto]
+                        gap-5 items-center">
+
+                <div>
+                    <h3 class="text-[#f2c94c] text-lg font-semibold mb-2">
+                        Join the Privileged Circle
+                    </h3>
+
+                    <p class="text-gray-300 text-xs sm:text-sm leading-5 max-w-md">
+                        Receive exclusive invitations, showcase previews, and
+                        private booking access.
+                    </p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-2">
+                    <input
+                        type="email"
+                        placeholder="Your email address"
+                        class="w-full sm:w-60 h-10 px-4 rounded-full
+                               border border-gray-700
+                               text-white text-xs
+                               outline-none
+                               placeholder:text-gray-500"
+                    >
+
+                    <button
+                        class="h-10 px-5 rounded-full
+                               bg-[#f2c94c] text-black
+                               text-xs font-semibold
+                               hover:bg-[#e5b936] transition">
+                        Subscribe
+                    </button>
+                </div>
+
+            </div>
+
+
+            <!-- Links Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mt-6">
+
+                <!-- Company -->
+                <div>
+                    <h4 class="text-[#f2c94c] text-xs font-bold mb-4">
+                        COMPANY
+                    </h4>
+
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Events</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-[#f2c94c] text-xs font-bold mb-4">
+                        QUICK LINKS
+                    </h4>
+
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="registration.html">Register</a></li>
+                        <li><a href="booking.html">Booking</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-[#f2c94c] text-xs font-bold mb-4">
+                        SERVICES
+                    </h4>
+
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li><a href="#">Weddings</a></li>
+                        <li><a href="#">Birthdays</a></li>
+                        <li><a href="#">Photography</a></li>
+                        <li><a href="#">Corporate Events</a></li>
+                        <li><a href="#">Workshops</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-[#f2c94c] text-xs font-bold mb-4">
+                        CONTACT
+                    </h4>
+
+                    <ul class="space-y-2 text-xs text-gray-300">
+                        <li>Kochi, Kerala, India</li>
+                        <li>hello@Eventurelation.com</li>
+                        <li>+91 98765 43210</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Bottom -->
+    <div class="border-t border-gray-800 mt-10 pt-5
+                grid grid-cols-1 md:grid-cols-2
+                gap-4 items-center">
+
+        <p class="text-xs text-gray-300">
+            © 2026 Eventurelation. All Rights Reserved.
+        </p>
+
+        <div class="flex flex-wrap md:justify-end gap-5
+                    text-xs text-gray-300">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Security Standard</a>
+        </div>
+
+    </div>
+
+</footer>
+    
+    
+<script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+
+<!-- gsap  -->
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<!-- ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<script>
+
+    // Register ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Contact Form Stagger Animation
+    gsap.from("#contact-form > div", {
+
+        y: 50,
+        opacity: 0,
+        duration: 1.2,
+        stagger: 0.3,
+        ease: "power3.out",
+
+        scrollTrigger: {
+            trigger: "#contact-form",
+            start: "top 80%",
+            toggleActions: "play none none reverse"
+        }
+
+    });
+
+</script>
+
+<!-- Ionicons -->
+<script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+
+<!-- flowbite  -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.min.js"></script>
+</body>
+</html>
